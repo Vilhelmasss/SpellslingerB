@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Inventory Rune Data")]
+[CreateAssetMenu(menuName = "Inventory Card Data")]
 
 public class InvCardData : ScriptableObject
 {
