@@ -2,15 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Inventory Rune Data")]
+[CreateAssetMenu(menuName = "Inventory Spell Data")]
 
-public class InvSpellData : MonoBehaviour
+public class InvSpellData : ScriptableObject
 {
     public string id;
     public string displayName;
     public string description;
-    public int totalSlots;
-    public int lockedSlots;
     public int tier;
     public Sprite icon;
     public Sprite iconBar;
