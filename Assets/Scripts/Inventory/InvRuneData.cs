@@ -13,4 +13,22 @@ public class InvRuneData : ScriptableObject
     public Sprite icon;
     public GameObject prefab;
     public List<string> tags;
+        
+
+    public List<string> ConflictingTags(List<string> otherTags)
+    {
+        List<string> conflictingTags = new List<string>();
+        foreach (string runeTag in tags)
+        {
+            foreach (string otherTag in otherTags)
+            {
+                if (runeTag == otherTag)
+                {
+                    conflictingTags.Add(runeTag);
+                }
+            }
+        }
+
+        return conflictingTags;
+    }
 }
