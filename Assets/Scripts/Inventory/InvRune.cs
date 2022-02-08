@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [SerializeField]
-public class InvRune : MonoBehaviour
+public class InvRune 
 {
     public InvRuneData data { get; private set; }
     public int stackSize { get; private set; }
@@ -22,6 +22,12 @@ public class InvRune : MonoBehaviour
     public void RemoveFromStack()
     {
         stackSize--;
+    }
+
+    public override string ToString()
+    {
+
+        return data.ToString();
     }
 
 }

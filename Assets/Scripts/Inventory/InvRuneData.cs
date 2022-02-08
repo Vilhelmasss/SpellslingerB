@@ -31,4 +31,9 @@ public class InvRuneData : ScriptableObject
 
         return conflictingTags;
     }
+
+    public override string ToString()
+    {
+        return $"{id} {displayName} {tier} {tags}";
+    }
 }
