@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [SerializeField]
-public class InvRune 
+public class InvSpell
 {
-    public InvRuneData data { get; private set; }
+    public InvSpellData data { get; private set; }
     public int stackSize { get; private set; }
 
-    public InvRune(InvRuneData source)
+    public InvSpell(InvSpellData source)
     {
         data = source;
         AddToStack();
@@ -19,15 +19,10 @@ public class InvRune
         stackSize++;
     }
 
-    public void RemoveFromStack()
+    public void RemoveFromStack()   
     {
         stackSize--;
     }
 
-    public override string ToString()
-    {
-
-        return data.ToString();
-    }
 
 }

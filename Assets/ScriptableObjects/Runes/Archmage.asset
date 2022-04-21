@@ -16,7 +16,7 @@ MonoBehaviour:
   displayName: Archamge
   description: Heavily increases mana requirement for the spell to increase its damage
   tier: 5
-  icon: {fileID: 21300000, guid: 39de2f042d03fff43a5a0ac82fff8ac8, type: 3}
+  icon: {fileID: 21300000, guid: 16e861d266601c443aa6c3b210ce1efb, type: 3}
   prefab: {fileID: 0}
   tags:
   - Mana

@@ -2,18 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Inventory Rune Data")]
+[CreateAssetMenu(menuName = "Inventory Spell Data")]
 
-public class InvRuneData : ScriptableObject
+public class InvSpellData : ScriptableObject
 {
     public string id;
     public string displayName;
     public string description;
+    public string type;
     public int tier;
     public Sprite icon;
+    public Sprite iconBar;
     public GameObject prefab;
     public List<string> tags;
-        
 
     public List<string> ConflictingTags(List<string> otherTags)
     {
