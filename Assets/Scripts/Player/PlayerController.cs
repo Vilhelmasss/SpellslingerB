@@ -4,24 +4,36 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private CharacterController controller;
-    private Vector3 playerVelocity;
-    private bool groundedPlayer;
-    private float playerSpeed = 10.0f;
-
-
-    private void Start()
+    [SerializeField] private float movementSpeed;
+    void Start()
     {
-        controller = gameObject.AddComponent<CharacterController>();
+        
     }
 
+    // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("A"))
+        HandleMovementInput();
+        HandleRotationInput();
+    }
+
+    void HandleMovementInput()
+    {
+        float _horizontal = Input.GetAxis("Horizontal");
+        float _vertical = Input.GetAxis("Vertical");
+
+        Vector3 _movement = new Vector3(_horizontal, 0, _vertical);
+        transform.Translate(_movement * movementSpeed * Time.deltaTime, Space.World);
+    }
+
+    void HandleRotationInput()
+    {
+        RaycastHit _hit;
+        Ray _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
+        if (Physics.Raycast(_ray, out _hit))
         {
-            Vector3 mov = new Vector3(playerSpeed * Time.deltaTime, 0f, 0f);
-            gameObject.transform.forward += mov;
+            transform.LookAt(new Vector3(_hit.point.x, transform.position.y, _hit.point.z));
         }
-        
     }
 }
