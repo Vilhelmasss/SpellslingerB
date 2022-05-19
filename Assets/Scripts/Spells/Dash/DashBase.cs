@@ -7,16 +7,22 @@ public class DashBase : MonoBehaviour
     private Vector3 mov;
     [SerializeField] private bool shouldDash = false;
     [SerializeField] private bool canMove = true;
+    // Dash / Blink
+    [SerializeField] private string dashType;
 
+    // StartCaroutine OnStart (If Exists)
+    // StartCaroutine OnEnd (If Exists)
     void Update()
     {
         AttemptVD();
         CheckDash();
     }
 
+
+
     void AttemptVD()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (gameObject.GetComponent<PlayerController>().CanItMove())
             {
@@ -77,7 +83,7 @@ public class DashBase : MonoBehaviour
 
     void AttemptDash()
     {
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (canMove)
             {
