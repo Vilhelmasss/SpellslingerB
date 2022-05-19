@@ -1,29 +1,41 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float movementSpeed;
-    void Start()
-    {
-        
-    }
+    public float movementSpeed;
+    [SerializeField] private bool canMove = true;
+    private IEnumerable coroutineDash;
 
-    // Update is called once per frame
     void Update()
     {
         HandleMovementInput();
         HandleRotationInput();
     }
 
+    public bool CanItMove()
+    {
+        return canMove;
+    }
+
+    void CanMove()
+    {
+        canMove = true; 
+    }
+
+
     void HandleMovementInput()
     {
-        float _horizontal = Input.GetAxis("Horizontal");
-        float _vertical = Input.GetAxis("Vertical");
+        if (canMove)
+        {
+            float _horizontal = Input.GetAxis("Horizontal");
+            float _vertical = Input.GetAxis("Vertical");
 
-        Vector3 _movement = new Vector3(_horizontal, 0, _vertical);
-        transform.Translate(_movement * movementSpeed * Time.deltaTime, Space.World);
+            Vector3 _movement = new Vector3(_horizontal, 0, _vertical);
+            transform.Translate(_movement * movementSpeed * Time.deltaTime, Space.World);
+        }
     }
 
     void HandleRotationInput()

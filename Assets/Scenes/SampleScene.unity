@@ -682,8 +682,8 @@ GameObject:
   - component: {fileID: 2062677410}
   - component: {fileID: 2062677409}
   - component: {fileID: 2062677408}
-  - component: {fileID: 2062677407}
   - component: {fileID: 2062677406}
+  - component: {fileID: 2062677407}
   m_Layer: 0
   m_Name: Playa
   m_TagString: Untagged
@@ -704,6 +704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 5
+  canMove: 1
 --- !u!114 &2062677407
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -711,16 +712,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2062677405}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7fe2aca0e49e9e64588ae8f1b6e7bec8, type: 3}
+  m_Script: {fileID: 11500000, guid: f26031acbcd84174c8d6055056b7b5a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shouldDash: 0
   canMove: 1
-  canRotate: 1
-  rb: {fileID: 0}
-  movementSpeed: 10
-  targetRotation: {x: 0, y: 0, z: 0, w: 0}
 --- !u!54 &2062677408
 Rigidbody:
   m_ObjectHideFlags: 0
