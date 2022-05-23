@@ -15,7 +15,7 @@ public class InvSpellData : ScriptableObject
     public Sprite iconBar;
     public GameObject prefab;
     public List<string> tags;
-
+     
     public List<string> ConflictingTags(List<string> otherTags)
     {
         List<string> conflictingTags = new List<string>();
