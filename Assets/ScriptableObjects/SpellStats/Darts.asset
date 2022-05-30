@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Darts
   m_EditorClassIdentifier: 
   basicName: Darts
-  manaCost: 1
+  lifespan: 5
+  manaCost: 10
   cooldown: 0.5
   recastTime: 0.2
   stackMaxCount: 10
-  extraScript: 0
-  scriptName: 
+  projectile: {fileID: 5000158667635996523, guid: 7bd005a5362a31d43a17efb0ad4973af, type: 3}
