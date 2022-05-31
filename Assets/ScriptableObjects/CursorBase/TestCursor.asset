@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f5db11f27bdac4fb153c9ae8cb3649, type: 3}
+  m_Name: TestCursor
+  m_EditorClassIdentifier: 
+  basicName: Test
+  lifespan: 10
+  manaCost: 25
+  cooldown: 10
+  recastTime: 3
+  stackMaxCount: 1
+  cursorVfx: {fileID: 4744683724402886695, guid: bf1688134d9c95a44a67d089f4e76955, type: 3}

@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SlowerProjectile : IRuneInterface
+public class SlowerProjectile : MonoBehaviour, IRuneInterface
 {
     public GameObject ExecuteAll(GameObject go = null)
     {

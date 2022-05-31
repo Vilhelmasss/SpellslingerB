@@ -27,7 +27,7 @@ public abstract class SpellBase : MonoBehaviour
     public bool canRecast;
 
     public SpellProjectileStats projectileStats;
-
+    public SpellCursorStats cursorStats;
     public abstract void GetSpellStats(ScriptableObject _spellStats);
 
     public abstract void AssignToBase();

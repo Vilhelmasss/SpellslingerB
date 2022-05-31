@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CommandCenter : MonoBehaviour
 {
-    public static CommandCenter Instance { get; set; }
+    public static CommandCenter Instance { get; private set; }
+
 
     public Dictionary<string, IRuneInterface> AllRunes = new Dictionary<string, IRuneInterface>();
     
@@ -14,8 +15,9 @@ public class CommandCenter : MonoBehaviour
     public List<string> RuneUltimate;
     public List<string> RuneDash;
 
-    public List<IRuneInterface> RuneList = new List<IRuneInterface>();
+    public List<string> RuneList = new List<string>();
 
+    private List<GameObject> runeGameObjects = new List<GameObject>();
     private void Awake()
     {
         // If there is an instance, and it's not me, delete myself.
@@ -28,49 +30,73 @@ public class CommandCenter : MonoBehaviour
         {
             Instance = this;
         }
+        AllRunesDictionary();
+
     }
 
-    void Start()
+
+    public void RuneStringList()
     {
-        //        allRunes.Add("FasterProjectiles", ); 
+        RuneList.Add("SlowerProjectile");
+        RuneList.Add("FasterProjectile");
+        RuneList.Add("MoreDamage");
+        RuneList.Add("LongerLifespan");
+        RuneList.Add("ShorterLifespan");
+        RuneList.Add("ReduceManaCost");
+        RuneList.Add("IncreaseManaCost");
+        RuneList.Add("IncreaseManaForDamage");
+        RuneList.Add("DecreaseCooldown");
+        RuneList.Add("IncreaseCooldownForDamage");
+        RuneList.Add("LowerRecast");
+        RuneList.Add("MoreStacks");
+        RuneList.Add("LargerSize");
+
 
     }
 
     public void AllRunesDictionary()
     {
-        GameObject ms = new GameObject("Test");
-        ms.AddComponent<MoreStacks>();
-        
-//        IRuneInterface slowerProjectile = new SlowerProjectile();
-//        IRuneInterface moreDamage = new MoreDamage();
-//        IRuneInterface longerLifespan = new LongerLifespan();     
-//        IRuneInterface shorterLifeSpan = new ShorterLifespan();
-//        IRuneInterface reduceManaCost = new ReduceManaCost();
-//        IRuneInterface increaseManaCost = new IncreasedManaCost();
-//        IRuneInterface increaseManaForDamage = new IncreasedManaForDamage();
-//        IRuneInterface decreaseCooldown = new DecreaseCooldown();
-//        IRuneInterface cooldownsForDamage = new IncreaseCooldownForDamage();
-//        IRuneInterface lowerRecast = new LowerRecast();
-//        IRuneInterface moreStacks = new MoreStacks();
-//        IRuneInterface largerSize = new LargerSize();
-//
-        AllRunes.Add("MoreStacks", ms.GetComponent<MoreStacks>());
-//        AllRunes.Add("SlowerProjectile", slowerProjectile);
-//        AllRunes.Add("MoreDamage", moreDamage);
-//        AllRunes.Add("LongerLifespan", longerLifespan);
-//        AllRunes.Add("ShorterLifespan", shorterLifeSpan);
-//        AllRunes.Add("ReduceManaCost", reduceManaCost);
-//        AllRunes.Add("IncreaseManaCost", increaseManaCost);
-//        AllRunes.Add("IncreaseManaForDamage", increaseManaForDamage);
-//        AllRunes.Add("DecreaseCooldown", decreaseCooldown);
-//        AllRunes.Add("IncreaseCooldownForDamage", cooldownsForDamage);
-//        AllRunes.Add("LowerRecast", lowerRecast);
-//        AllRunes.Add("MoreStacks", moreStacks);
-//        AllRunes.Add("LargerSize", largerSize);
-//        AllRunes.Add("FasterProjectiles", );
+
+        GameObject temp = new GameObject();
+
+        temp.AddComponent<SlowerProjectile>();
+        temp.AddComponent<FasterProjectile>();
+        temp.AddComponent<MoreDamage>();
+        temp.AddComponent<LongerLifespan>();
+        temp.AddComponent<ShorterLifespan>();
+        temp.AddComponent<ReduceManaCost>();
+        temp.AddComponent<IncreasedManaCost>();
+        temp.AddComponent<IncreasedManaForDamage>();
+        temp.AddComponent<DecreaseCooldown>();
+        temp.AddComponent<IncreaseCooldownForDamage>();
+        temp.AddComponent<LowerRecast>();
+        temp.AddComponent<MoreStacks>();
+        temp.AddComponent<LargerSize>();
+
+
+        AllRunes.Add("SlowerProjectile", temp.GetComponent<SlowerProjectile>());
+        AllRunes.Add("FasterProjectile", temp.GetComponent<FasterProjectile>());
+        AllRunes.Add("MoreDamage", temp.GetComponent<MoreDamage>());
+        AllRunes.Add("LongerLifespan", temp.GetComponent<LongerLifespan>());
+        AllRunes.Add("ShorterLifespan", temp.GetComponent<ShorterLifespan>());
+        AllRunes.Add("ReduceManaCost", temp.GetComponent<ReduceManaCost>());
+        AllRunes.Add("IncreaseManaCost", temp.GetComponent<IncreasedManaCost>());
+        AllRunes.Add("IncreaseManaForDamage", temp.GetComponent<IncreasedManaForDamage>());
+        AllRunes.Add("DecreaseCooldown", temp.GetComponent<DecreaseCooldown>());
+        AllRunes.Add("IncreaseCooldownForDamage", temp.GetComponent<IncreaseCooldownForDamage>());
+        AllRunes.Add("LowerRecast", temp.GetComponent<LowerRecast>());
+        AllRunes.Add("MoreStacks", temp.GetComponent<MoreStacks>());
+        AllRunes.Add("LargerSize", temp.GetComponent<LargerSize>());
+
     }
 
-    public GameObject Execute(string dictionaryKeyword, GameObject go)
+    private void AddRune(string dKey)
+    {
+
+    }
+
+
+    public GameObject ExecuteAwake(string dictionaryKeyword, GameObject go)
     {
         return AllRunes[dictionaryKeyword].ExecuteAwake(go);
     }

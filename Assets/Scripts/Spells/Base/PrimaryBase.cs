@@ -3,12 +3,12 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class BasicBase : MonoBehaviour
+public class PrimaryBase : MonoBehaviour
 {
-    public SpellProjectileStats projectileStats;
-    public SpellProjectileStats basicProjectileStats;
+    public SpellCursorStats cursorStats;
+    public SpellCursorStats primaryCursorStats;
     public GameObject player;
-    public GameObject basicKeeper;
+    public GameObject primaryKeeper;
 
     public GameObject FirePoint;
 
@@ -22,9 +22,9 @@ public class BasicBase : MonoBehaviour
     {
         switch (spellBase)
         {
-            case "Projectile":
-                basicKeeper.AddComponent<SpellProjectileBase>();
-                ProjectileBaseStart(basicProjectileStats);
+            case "Cursor":
+                primaryKeeper.AddComponent<SpellCursorBase>();
+                CursorBaseStart(primaryCursorStats);
                 break;
             default:
                 Debug.Log("Didn't find the base");
@@ -55,12 +55,12 @@ public class BasicBase : MonoBehaviour
         stacks.text = gameObject.GetComponent<SpellBase>().stackCount.ToString();
     }
 
-    public void ProjectileBaseStart(SpellProjectileStats _projectileStats)
+    public void CursorBaseStart(SpellCursorStats _cursorStats)
     {
-        gameObject.GetComponent<SpellBase>().GetSpellStats(_projectileStats);
+        gameObject.GetComponent<SpellBase>().GetSpellStats(_cursorStats);
     }
 
-    void ProjectileCall()
+    void CursorCall()
     {
         gameObject.GetComponent<SpellBase>().Update();
         UpdateTMP();
