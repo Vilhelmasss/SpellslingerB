@@ -24,10 +24,12 @@ public abstract class SpellBase : MonoBehaviour
     public float currCooldownTimer;
     public float recastTimerMax;
     public float recastTimer;
+    public KeyCode keyCode;
     public bool canRecast;
 
     public SpellProjectileStats projectileStats;
     public SpellCursorStats cursorStats;
+    public SpellCenteredStats centeredStats;
     public abstract void GetSpellStats(ScriptableObject _spellStats);
 
     public abstract void AssignToBase();

@@ -30,10 +30,14 @@ public class PrimaryBase : MonoBehaviour
                 Debug.Log("Didn't find the base");
                 break;
         }
+
+        gameObject.GetComponent<SpellBase>().keyCode = KeyCode.Q;
+
         gameObject.GetComponent<SpellBase>().AssignToZero();
         gameObject.GetComponent<SpellBase>().AssignToBase();
         gameObject.GetComponent<SpellBase>().AssignFromBase();
         gameObject.GetComponent<SpellBase>().AdjustForRunes(gameObject);
+        
         InitializeTMP();
     }
 

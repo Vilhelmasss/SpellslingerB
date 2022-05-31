@@ -24,7 +24,6 @@ public class FasterProjectile : MonoBehaviour, IRuneInterface
     }
     public GameObject ExecuteEnd(GameObject go)
     {
-        Debug.Log("Piss");
         return null;
     }
 
