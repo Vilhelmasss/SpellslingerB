@@ -7,10 +7,12 @@ using UnityEngine;
 public class SpellProjectileStats : ScriptableObject
 {
     public string basicName;
+    public float lifespan;
     public float manaCost;
     public float cooldown;
     public float recastTime;
     public int stackMaxCount;
-    public bool extraScript;
-    public string scriptName;
+
+    public GameObject projectile;
+
 }

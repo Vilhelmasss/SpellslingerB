@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ae0af2344b210d4f8288f9b0381b074, type: 3}
+  m_Name: DartTest
+  m_EditorClassIdentifier: 
+  cooldownBase: 0
+  manaCostBase: 0
+  recastTimerMaxBase: 0
+  stackMaxCountBase: 0
+  lifespanBase: 0
+  cooldown: 0
+  manaCost: 0
+  lifespan: 0
+  stackMaxCount: 0
+  stackCount: 0
+  currCooldownTimer: 0
+  recastTimerMax: 0
+  recastTimer: 0
+  canRecast: 0
+  script: {fileID: 0}
+  attachedRunes: []
+  projectileStats: {fileID: 11400000, guid: 585c409cfa076ca4083b31648fd58ea4, type: 2}
+  projectile: {fileID: 0}

@@ -2,46 +2,44 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SpellBase : MonoBehaviour
+public abstract class SpellBase : MonoBehaviour
 {
+    public string basicName;
 
-    void Start()
-    {
+    public float cooldownBase;
+    public float manaCostBase;
+    public float recastTimerMaxBase;
+    public int stackMaxCountBase;
+    public float lifespanBase;
+    public float speedBase;
+    public float damageModBase = 1f;
 
-    }
-    void Update()
-    {
-        CheckBasic();
-    }
+    public float damageMod;
+    public float cooldown;
+    public float manaCost;
+    public float lifespan;
+    public float speed;
+    public int stackMaxCount;
+    public int stackCount;
+    public float currCooldownTimer;
+    public float recastTimerMax;
+    public float recastTimer;
+    public bool canRecast;
 
-    void CheckBasic()
-    {
+    public SpellProjectileStats projectileStats;
+    public SpellCursorStats cursorStats;
+    public abstract void GetSpellStats(ScriptableObject _spellStats);
 
-    }
+    public abstract void AssignToBase();
+    public abstract void AssignToZero();
+    public abstract void AssignFromBase();
+    public abstract bool AttemptCasting();
+    public abstract void AdjustForRunes(GameObject go);
+    public abstract void CastSpell(GameObject player, GameObject firePoint);
 
-    void CheckPrimary()
-    {
+    public abstract void Update();
 
-    }
 
-    void CheckDash()
-    {
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            if (gameObject.GetComponent<PlayerController>().CanItMove())
-            {
-                
-            }
-        }
-    }
 
-    void CheckUltimate()
-    {
-
-    }
-    void CheckUtility()
-    {
-
-    }
 
 }

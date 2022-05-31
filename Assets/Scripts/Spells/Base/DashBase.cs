@@ -12,7 +12,7 @@ public class DashBase : MonoBehaviour
     [SerializeField] private string dashType;
 
     [SerializeField]
-    private SpellDashStats quickDash;
+    private SpellDashStats dash;
 
     public float dashTimeBase;
     public float dashDistanceBase;
@@ -42,7 +42,7 @@ public class DashBase : MonoBehaviour
 
     void Start()
     {
-        AssignToBase(quickDash);
+        AssignToBase(dash);
         AssignFromBase();
 
         canRecast = true;
