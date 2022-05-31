@@ -21,6 +21,7 @@ public class CardFull : MonoBehaviour
 
     void Start()
     {
+        Time.timeScale = 0f;    
         if (cardQuickview != null)
         {
             runeList = cardQuickview.GetComponent<CardQuickview>().runeList;
@@ -60,12 +61,6 @@ public class CardFull : MonoBehaviour
         {
             runeSlots[i].gameObject.GetComponent<Image>().color = Color.white;  
         }
-        for (int i = 0; i < usedRunes; i++)
-        {
-            Debug.Log($"{cardQuickview.GetComponent<CardQuickview>().runeList[i].icon}");
-            runeSlots[i].gameObject.GetComponent<Image>().sprite = cardQuickview.GetComponent<CardQuickview>().runeList[i].icon;
-        }
-
         for (int i = maxRunes; i < 6 ; i++)
         {
             runeSlots[i].gameObject.GetComponent<Image>().color = Color.black;

@@ -37,11 +37,13 @@ public class SpellCursorBase : SpellBase
 
     public override bool AttemptCasting()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
+        if (Input.GetKeyDown(keyCode))
         {
             if (canRecast && stackCount > 0)
             {
+                canRecast = false;
                 return true;
+
             }
         }
         return false;
@@ -51,8 +53,8 @@ public class SpellCursorBase : SpellBase
     {
         RaycastHit _hit;
         Ray _ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        recastTimer = recastTimerMax;
 
-        
         if (Physics.Raycast(_ray, out _hit))
         {
             Vector3 spawnPoint = new Vector3(_hit.point.x, transform.position.y, _hit.point.z);
@@ -111,7 +113,7 @@ public class SpellCursorBase : SpellBase
     {
         cooldownBase = cursorStats.cooldown;
         manaCostBase = cursorStats.manaCost;
-        recastTimerMax = cursorStats.recastTime;
+        recastTimerMaxBase = cursorStats.recastTime;
         stackMaxCountBase = cursorStats.stackMaxCount;
         lifespanBase = cursorStats.lifespan;
         spellVfx = cursorStats.cursorVfx;
@@ -132,6 +134,7 @@ public class SpellCursorBase : SpellBase
         cooldown = cooldownBase;
         manaCost = manaCostBase;
         recastTimer = recastTimerMaxBase;
+        recastTimerMax = recastTimerMaxBase;
         stackMaxCount = stackMaxCountBase;
         lifespan = lifespanBase;
     }

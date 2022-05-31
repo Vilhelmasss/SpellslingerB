@@ -49,7 +49,8 @@ public class DashBase : MonoBehaviour
         stackCount = stackMaxCount;
         currCooldownTimer = cooldown;
         recastTimer = recastTimerMax;
-        
+
+
     }
 
     void Update()
@@ -79,6 +80,7 @@ public class DashBase : MonoBehaviour
         manaCost = manaCostBase;
         recastTimer = recastTimerMaxBase;
         stackMaxCount = stackMaxCountBase;
+
     }
 
     void RecastTimer()
@@ -114,6 +116,8 @@ public class DashBase : MonoBehaviour
             stackCount += addedAmount;
         }
     }
+
+
 
     void AttemptVD()
     {

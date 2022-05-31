@@ -5,11 +5,10 @@ using UnityEngine;
 
 public class BasicBase : MonoBehaviour
 {
-    public SpellProjectileStats projectileStats;
     public SpellProjectileStats basicProjectileStats;
     public GameObject player;
     public GameObject basicKeeper;
-
+    public KeyCode keycode = KeyCode.Mouse0;
     public GameObject FirePoint;
 
 
@@ -23,13 +22,15 @@ public class BasicBase : MonoBehaviour
         switch (spellBase)
         {
             case "Projectile":
-                basicKeeper.AddComponent<SpellProjectileBase>();
+                gameObject.AddComponent<SpellProjectileBase>();
                 ProjectileBaseStart(basicProjectileStats);
                 break;
             default:
                 Debug.Log("Didn't find the base");
                 break;
         }
+
+        gameObject.GetComponent<SpellBase>().keyCode = KeyCode.Mouse0;
         gameObject.GetComponent<SpellBase>().AssignToZero();
         gameObject.GetComponent<SpellBase>().AssignToBase();
         gameObject.GetComponent<SpellBase>().AssignFromBase();
@@ -58,6 +59,7 @@ public class BasicBase : MonoBehaviour
     public void ProjectileBaseStart(SpellProjectileStats _projectileStats)
     {
         gameObject.GetComponent<SpellBase>().GetSpellStats(_projectileStats);
+        gameObject.GetComponent<SpellBase>().basicName = _projectileStats.basicName;
     }
 
     void ProjectileCall()

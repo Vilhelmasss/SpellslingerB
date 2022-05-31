@@ -37,10 +37,11 @@ public class SpellProjectileBase : SpellBase
 
     public override bool AttemptCasting()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(keyCode))
         {
             if (canRecast && stackCount > 0)
             {
+                canRecast = false;
                 return true;
             }
         }

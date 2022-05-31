@@ -16,6 +16,6 @@ MonoBehaviour:
   lifespan: 10
   manaCost: 25
   cooldown: 10
-  recastTime: 3
+  recastTime: 5
   stackMaxCount: 1
   cursorVfx: {fileID: 4744683724402886695, guid: bf1688134d9c95a44a67d089f4e76955, type: 3}
