@@ -5,8 +5,9 @@ using UnityEngine;
 
 public class BasicBase : MonoBehaviour
 {
-    public SpellProjectileBase basicProjectileBase;
+    public SpellProjectileStats projectileStats;
     public SpellProjectileStats basicProjectileStats;
+    public GameObject basicKeeper;
 
     public GameObject FirePoint;
 
@@ -20,16 +21,18 @@ public class BasicBase : MonoBehaviour
         switch (spellBase)
         {
             case "Projectile":
+                gameObject.AddComponent<SpellProjectileBase>();
                 ProjectileBaseStart(basicProjectileStats);
-                basicProjectileBase.AssignToZero();
-                basicProjectileBase.AssignToBase();
-                basicProjectileBase.AssignFromBase();
-                InitializeTMP();
                 break;
             default:
                 Debug.Log("Didn't find the base");
                 break;
         }
+        gameObject.GetComponent<SpellBase>().AssignToZero();
+        gameObject.GetComponent<SpellBase>().AssignToBase();
+        gameObject.GetComponent<SpellBase>().AssignFromBase();
+        gameObject.GetComponent<SpellBase>().AdjustForRunes(gameObject);
+        InitializeTMP();
     }
 
     void Update()
@@ -39,32 +42,32 @@ public class BasicBase : MonoBehaviour
 
     private void UpdateTMP()
     {
-        cd.text = basicProjectileBase.currCooldownTimer.ToString("0.0");
-        stacks.text = basicProjectileBase.stackCount.ToString();
+        cd.text = gameObject.GetComponent<SpellBase>().currCooldownTimer.ToString("0.0");
+        stacks.text = gameObject.GetComponent<SpellBase>().stackCount.ToString();
     }
 
     private void InitializeTMP()
     {
-        basicName.text = basicProjectileBase.projectileStats.basicName;
-        cd.text = basicProjectileBase.currCooldownTimer.ToString("0.0");
-        stacks.text = basicProjectileBase.stackCount.ToString();
+        basicName.text = gameObject.GetComponent<SpellBase>().basicName;
+        cd.text = gameObject.GetComponent<SpellBase>().currCooldownTimer.ToString("0.0");
+        stacks.text = gameObject.GetComponent<SpellBase>().stackCount.ToString();
     }
 
-    public void ProjectileBaseStart(SpellProjectileStats projectileStats)
+    public void ProjectileBaseStart(SpellProjectileStats _projectileStats)
     {
-        basicProjectileBase.projectileStats = projectileStats;
+        gameObject.GetComponent<SpellBase>().GetSpellStats(_projectileStats);
     }
 
     void ProjectileCall()
     {
-        basicProjectileBase.Update();
+        gameObject.GetComponent<SpellBase>().Update();
         UpdateTMP();
-        if (basicProjectileBase.AttemptCasting())
+        if (gameObject.GetComponent<SpellBase>().AttemptCasting())
         {
-            if (gameObject.GetComponent<PlayerStats>().GetMana() >= basicProjectileBase.manaCost)
+            if (gameObject.GetComponent<PlayerStats>().GetMana() >= gameObject.GetComponent<SpellBase>().manaCost)
             {
-                basicProjectileBase.CastProjectile(gameObject, FirePoint);
-                gameObject.GetComponent<PlayerStats>().ConsumeMana(basicProjectileBase.manaCost);
+                gameObject.GetComponent<SpellBase>().CastSpell(gameObject, FirePoint);
+                gameObject.GetComponent<PlayerStats>().ConsumeMana(gameObject.GetComponent<SpellBase>().manaCost);
             }
         }
     }

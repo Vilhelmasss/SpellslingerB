@@ -5,33 +5,26 @@ using TMPro;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
-[CreateAssetMenu(menuName = "Spell Projectile Base")]
 
-public class SpellProjectileBase : ScriptableObject
+public class SpellProjectileBase : SpellBase
 {
-    public float cooldownBase;
-    public float manaCostBase;
-    public float recastTimerMaxBase;
-    public int stackMaxCountBase;
-    public float lifespanBase;
+    [SerializeField] private List<InvRuneData> attachedRunes = new List<InvRuneData>(6);   
 
-    public float cooldown;
-    public float manaCost;
-    public float lifespan;
-    public int stackMaxCount;
-    public int stackCount;
-    public float currCooldownTimer;
-    public float recastTimerMax;
-    public float recastTimer;
-    public bool canRecast;
-
-    public MonoScript script;
-    [SerializeField] private List<InvRuneData> attachedRunes = new List<InvRuneData>(6);
-    
-    public SpellProjectileStats projectileStats;
     public GameObject projectile;
-    
-    public void Update()
+
+    public override void GetSpellStats(ScriptableObject _spellStats)
+    {
+        projectileStats = (SpellProjectileStats)_spellStats;
+    }
+
+    public override void AdjustForRunes(GameObject go)
+    {
+        CommandCenter.Instance.GetComponent<CommandCenter>().AllRunesDictionary();
+        CommandCenter.Instance.GetComponent<CommandCenter>().Execute("MoreStacks", gameObject);
+
+    }
+
+    public override void Update()
     {
         
         RecastTimer();
@@ -39,7 +32,7 @@ public class SpellProjectileBase : ScriptableObject
     }
 
 
-    public bool AttemptCasting()
+    public override bool AttemptCasting()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -51,7 +44,7 @@ public class SpellProjectileBase : ScriptableObject
         return false;
     }
 
-    public void CastProjectile(GameObject player, GameObject firePoint)
+    public override void CastSpell(GameObject player, GameObject firePoint)
     {
         Vector3 direction = firePoint.transform.position - player.transform.position;
         GameObject vfx = Instantiate(projectile, firePoint.transform.position + Vector3.up * 0.5f,
@@ -104,7 +97,7 @@ public class SpellProjectileBase : ScriptableObject
             stackCount += addedAmount;
         }
     }
-    public void AssignToBase()
+    public override void AssignToBase()
     {
         cooldownBase = projectileStats.cooldown;
         manaCostBase = projectileStats.manaCost;
@@ -114,7 +107,7 @@ public class SpellProjectileBase : ScriptableObject
         projectile = projectileStats.projectile;
     }
 
-    public void AssignToZero()
+    public override void AssignToZero()
     {
         cooldownBase = 0f;
         manaCostBase = 0f;
@@ -124,7 +117,7 @@ public class SpellProjectileBase : ScriptableObject
         projectile = null;
     }
 
-    public void AssignFromBase()
+    public override void AssignFromBase()
     { 
         cooldown = cooldownBase;
         manaCost = manaCostBase;

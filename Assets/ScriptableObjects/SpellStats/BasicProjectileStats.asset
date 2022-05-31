@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 606e607f49395104c868fff591aa4c12, type: 3}
+  m_Name: BasicProjectileStats
+  m_EditorClassIdentifier: 
+  basicName: Darts
+  lifespan: 5
+  manaCost: 10
+  cooldown: 0.5
+  recastTime: 0.2
+  stackMaxCount: 10
+  projectile: {fileID: 5000158667635996523, guid: 7bd005a5362a31d43a17efb0ad4973af, type: 3}
