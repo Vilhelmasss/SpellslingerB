@@ -9,13 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f5db11f27bdac4fb153c9ae8cb3649, type: 3}
-  m_Name: IceAge
+  m_Script: {fileID: 11500000, guid: 3b0b15c53c5f9e94e86860bb79ca224f, type: 3}
+  m_Name: Conduits
   m_EditorClassIdentifier: 
-  basicName: Ice Age
+  spellName: 
+  instantiationType: 
   lifespan: 5
   manaCost: 50
-  cooldown: 10
-  recastTime: 5
+  cooldown: 20
+  recastTime: 10
   stackMaxCount: 1
-  cursorVfx: {fileID: 7010962879282711071, guid: 8083c26815f213947b79ed04dc7e97fe, type: 3}
+  spellVfx: {fileID: 837491374927518870, guid: 59aa7ea01f65a1c40a1605fa0c932af8, type: 3}

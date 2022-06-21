@@ -22,7 +22,6 @@ public class MoveProjectile : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Huh");
         if (collision.gameObject.layer == 10)
         {
             Destroy(gameObject);

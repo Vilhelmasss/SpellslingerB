@@ -11,11 +11,6 @@ public class PlayerController : MonoBehaviour
 
     public GameObject Conduit;
 
-    void Start()
-    {
-        Instantiate(Conduit, gameObject.transform);
-    }
-
     void Update()
     {
         HandleMovementInput();

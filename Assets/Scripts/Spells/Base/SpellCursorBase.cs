@@ -79,7 +79,7 @@ public class SpellCursorBase : SpellBase
 
     public string GetProjectileName()
     {
-        return cursorStats.basicName;
+        return cursorStats.spellName;
     }
 
     void RecastTimer()
@@ -116,7 +116,7 @@ public class SpellCursorBase : SpellBase
         recastTimerMaxBase = cursorStats.recastTime;
         stackMaxCountBase = cursorStats.stackMaxCount;
         lifespanBase = cursorStats.lifespan;
-        spellVfx = cursorStats.cursorVfx;
+        spellVfx = cursorStats.spellVfx;
     }
 
     public override void AssignToZero()

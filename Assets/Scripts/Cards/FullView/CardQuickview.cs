@@ -25,7 +25,7 @@ public class CardQuickview : MonoBehaviour
         maxRunesText.text = maxRunes.ToString();
         AdjustRuneIcons();
         SetClosedSlots();
-        SendToFullCard();
+//        SendToFullCard();
     }
 
     public void AdjustRuneIcons()
@@ -51,12 +51,7 @@ public class CardQuickview : MonoBehaviour
         }
     }
 
-    public void SendToFullCard()
-    {
-        fullCard = GetComponentInParent<FullCardLink>().fullCard;
-        fullCard.GetComponentInChildren<CardFull>().cardQuickview = this.gameObject;
-        fullCard.GetComponent<CardFull>().ReceiveCardData(this.gameObject);
-    }
+
 
 
 }

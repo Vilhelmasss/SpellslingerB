@@ -33,21 +33,6 @@ public class InvRuneSystem : MonoBehaviour
         runeSlots = new Dictionary<InvRuneData, GameObject>();
     }
 
-    void Update()
-    {
-
-        if (Input.GetKeyDown(KeyCode.S))
-        {
-            Debug.Log("Got to InvRuneSystem Update Space");
-            foreach (InvRune rune in inventory)
-            {
-                Debug.Log($"RR {rune.data.description}");
-
-
-            }
-        }
-    }
-
 
     public InvRune Get(InvRuneData referenceData)
     {
@@ -86,21 +71,32 @@ public class InvRuneSystem : MonoBehaviour
     {
         if (m_runeDictionary.TryGetValue(referenceData, out InvRune value))
         {
-            value.RemoveFromStack();
-
-            if (value.stackSize == 0)
+            if (CardFull.Instance.CardQuickview.usedRunes < CardFull.Instance.CardQuickview.maxRunes)
             {
-                inventory.Remove(value);
-                m_runeDictionary.Remove(referenceData);
-                Destroy(runeSlots[referenceData].gameObject);
+                value.RemoveFromStack();
+                if (CardFull.Instance.CardQuickview.usedRunes < CardFull.Instance.CardQuickview.maxRunes)
+                {
+                    CardFull.Instance.CardQuickview.runeList[CardFull.Instance.CardQuickview.usedRunes] = referenceData;
+                    CardFull.Instance.CardQuickview.usedRunes++;
+                    CardFull.Instance.CardQuickview.AdjustRuneIcons();
+                }
 
-                runeSlots.Remove(referenceData);
-            }
-            else
-            {
-                runeSlots[referenceData].GetComponent<RuneSlot>().AdjustQuantity();
+                if (value.stackSize == 0)
+                {
 
+                    inventory.Remove(value);
+                    m_runeDictionary.Remove(referenceData);
+                    Destroy(runeSlots[referenceData].gameObject);
+                    runeSlots.Remove(referenceData);
+
+                }
+                else
+                {
+                    runeSlots[referenceData].GetComponent<RuneSlot>().AdjustQuantity();
+                }
             }
         }
+        CardFull.Instance.AdjustRuneIconsToColors();
+
     }
 }   
