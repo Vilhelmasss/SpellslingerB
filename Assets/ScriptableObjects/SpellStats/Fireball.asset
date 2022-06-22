@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 606e607f49395104c868fff591aa4c12, type: 3}
   m_Name: Fireball
   m_EditorClassIdentifier: 
-  basicName: Fireball
+  spellName: Fireball
+  instantiationType: Projectile
   lifespan: 5
   manaCost: 10
-  cooldown: 0.7
+  cooldown: 1
   recastTime: 0.5
-  stackMaxCount: 10
-  projectile: {fileID: 2032020823835487948, guid: 4f360cb173655b44eb46d3d64f1df03f, type: 3}
+  stackMaxCount: 3
+  spellVfx: {fileID: 2032020823835487948, guid: 4f360cb173655b44eb46d3d64f1df03f, type: 3}

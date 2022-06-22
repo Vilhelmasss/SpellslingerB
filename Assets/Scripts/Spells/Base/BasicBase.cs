@@ -49,7 +49,7 @@ public class BasicBase : MonoBehaviour
         stacks.text = gameObject.GetComponent<SpellBase>().stackCount.ToString();
     }
 
-    private void InitializeTMP()
+    public void InitializeTMP()
     {
         basicName.text = gameObject.GetComponent<SpellBase>().basicName;
         cd.text = gameObject.GetComponent<SpellBase>().currCooldownTimer.ToString("0.0");
@@ -59,7 +59,7 @@ public class BasicBase : MonoBehaviour
     public void ProjectileBaseStart(SpellProjectileStats _projectileStats)
     {
         gameObject.GetComponent<SpellBase>().GetSpellStats(_projectileStats);
-        gameObject.GetComponent<SpellBase>().basicName = _projectileStats.basicName;
+        gameObject.GetComponent<SpellBase>().basicName = _projectileStats.spellName;
     }
 
     void ProjectileCall()

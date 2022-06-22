@@ -26,7 +26,6 @@ public class ChainLightningScript : MonoBehaviour
         else if (other.gameObject.layer == 7)
         {
             BounceAway(other);
-            //            Destroy(other.gameObject);
         }
     }
 
@@ -36,12 +35,5 @@ public class ChainLightningScript : MonoBehaviour
         Vector3 wallNormal = other.contacts[0].normal;
         Vector3 dir = Vector3.Reflect(rb.velocity, wallNormal);
         rb.velocity = dir * gameObject.GetComponent<MoveProjectile>().speed;
-        Debug.Log("I exist");
-        //        if (bounceCount == 0)
-        //        {
-        //            Destroy(gameObject, 1f);
-        //        }
     }
-
-
 }

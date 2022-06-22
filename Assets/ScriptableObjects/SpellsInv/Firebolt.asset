@@ -20,4 +20,6 @@ MonoBehaviour:
   icon: {fileID: 21300000, guid: 30e2420171d42af43aebe072558bc34f, type: 3}
   iconBar: {fileID: 0}
   prefab: {fileID: 0}
-  tags: []
+  spellStats: {fileID: 0}
+  tags:
+  - Projectile

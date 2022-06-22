@@ -48,12 +48,10 @@ public class SpellCenteredBase : SpellBase
     public override void CastSpell(GameObject player, GameObject firePoint)
     {
         recastTimer = recastTimerMax;
-
-
-            Vector3 spawnPoint = player.transform.position;
-            GameObject vfx = Instantiate(spellVfx, spawnPoint, player.transform.rotation);
-            stackCount--;
-            Destroy(vfx, centeredStats.lifespan);
+        Vector3 spawnPoint = player.transform.position;
+        GameObject vfx = Instantiate(spellVfx, spawnPoint, player.transform.rotation);
+        stackCount--;
+        Destroy(vfx, centeredStats.lifespan);
 
     }
 
@@ -70,7 +68,7 @@ public class SpellCenteredBase : SpellBase
 
     public string GetProjectileName()
     {
-        return cursorStats.basicName;
+        return cursorStats.spellName;
     }
 
     void RecastTimer()
@@ -84,8 +82,7 @@ public class SpellCenteredBase : SpellBase
     }
     void RechargeCooldown()
     {
-        Debug.Log("QQQQQQ");
-        currCooldownTimer -= Time.deltaTime;
+            currCooldownTimer -= Time.deltaTime;
         if (currCooldownTimer < 0)
         {
             currCooldownTimer = cooldown;
@@ -108,7 +105,7 @@ public class SpellCenteredBase : SpellBase
         recastTimerMaxBase = centeredStats.recastTime;
         stackMaxCountBase = centeredStats.stackMaxCount;
         lifespanBase = centeredStats.lifespan;
-        spellVfx = centeredStats.centered;
+        spellVfx = centeredStats.spellVfx;
     }
 
     public override void AssignToZero()

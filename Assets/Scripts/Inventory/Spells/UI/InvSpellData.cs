@@ -14,6 +14,7 @@ public class InvSpellData : ScriptableObject
     public Sprite icon;
     public Sprite iconBar;
     public GameObject prefab;
+    public SpellStatsBase spellStats;
     public List<string> tags;
      
     public List<string> ConflictingTags(List<string> otherTags)

@@ -38,10 +38,8 @@ public class InvSpellSystem : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.D))
         {
-            Debug.Log("Got to InvSpellSystem Update Space");
             foreach (InvSpell spell in inventory)
             {
-                Debug.Log($"RR {spell.data.description}");
 
 
             }
@@ -92,11 +90,15 @@ public class InvSpellSystem : MonoBehaviour
 
             if (value.stackSize == 0)
             {
-                inventory.Remove(value);
-                m_spellDictionary.Remove(referenceData);
-                Destroy(spellSlots[referenceData].gameObject);
+                if (CardFull.Instance != null)
+                {
 
-                spellSlots.Remove(referenceData);
+                        inventory.Remove(value);
+                        m_spellDictionary.Remove(referenceData);
+                        Destroy(spellSlots[referenceData].gameObject);
+                        spellSlots.Remove(referenceData);
+                    
+                }
             }
             else
             {

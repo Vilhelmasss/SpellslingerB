@@ -23,7 +23,6 @@ public class UltimateBase : MonoBehaviour
             case "Centered":
                 gameObject.AddComponent<SpellCenteredBase>();
                 CenteredBaseStart(centeredStats);
-                Debug.Log("Here");
                 break;
             default:
                 Debug.Log("Didn't find the base");
@@ -59,7 +58,7 @@ public class UltimateBase : MonoBehaviour
     public void CenteredBaseStart(SpellCenteredStats _projectileStats)
     {
         gameObject.GetComponent<SpellBase>().GetSpellStats(_projectileStats);
-        gameObject.GetComponent<SpellBase>().basicName = _projectileStats.basicName;
+        gameObject.GetComponent<SpellBase>().basicName = _projectileStats.spellName;
     }
 
     void CenteredCall()
