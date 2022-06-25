@@ -1,0 +1,158 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4943103533073422052
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4943103533073422055}
+  m_Layer: 0
+  m_Name: Docks_Colliders
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4943103533073422055
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4943103533073422052}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4943103533082974570}
+  - {fileID: 4943103532456085466}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &8793932773774401862
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4943103533073422055}
+    m_Modifications:
+    - target: {fileID: 4509014974300862508, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509014974300862508, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509014974300862508, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509014974300862508, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509014974300862508, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509014974300862508, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509014974300862508, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509014974300862508, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509014974300862508, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509014974300862508, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509014974300862508, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4509014974300862509, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+      propertyPath: m_Name
+      value: Docks_Piers
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+--- !u!4 &4943103533082974570 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4509014974300862508, guid: b97841101594d9746b19ba26c1af5ec0, type: 3}
+  m_PrefabInstance: {fileID: 8793932773774401862}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8954795667399166053
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4943103533073422055}
+    m_Modifications:
+    - target: {fileID: 4097357904167751614, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+      propertyPath: m_Name
+      value: Docks_Boats
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097357904167751615, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097357904167751615, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097357904167751615, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097357904167751615, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097357904167751615, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097357904167751615, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097357904167751615, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097357904167751615, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097357904167751615, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097357904167751615, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4097357904167751615, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+--- !u!4 &4943103532456085466 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4097357904167751615, guid: e804f9ca12190eb41b2d4919836c8353, type: 3}
+  m_PrefabInstance: {fileID: 8954795667399166053}
+  m_PrefabAsset: {fileID: 0}
