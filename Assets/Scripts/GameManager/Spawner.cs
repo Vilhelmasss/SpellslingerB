@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class Spawner : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public List<GameObject> enemyList;
+    public List<GameObject> spawnedEnemy;
+
     void Start()
     {
         
