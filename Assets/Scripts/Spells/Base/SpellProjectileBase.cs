@@ -53,22 +53,6 @@ public class SpellProjectileBase : SpellBase
         Destroy(vfx, projectileStats.lifespan);
 
     }
-
-    public float GetCooldown()
-    {
-        return currCooldownTimer;
-    }
-
-    public int GetStacks()
-    {
-        return stackCount;
-    }
-
-    public string GetProjectileName()
-    {
-        return projectileStats.spellName;
-    }
-
     void RecastTimer()
     {
         recastTimer -= Time.deltaTime;
@@ -97,6 +81,7 @@ public class SpellProjectileBase : SpellBase
     }
     public override void AssignToBase()
     {
+        basicName = projectileStats.spellName;
         cooldownBase = projectileStats.cooldown;
         manaCostBase = projectileStats.manaCost;
         recastTimerMax = projectileStats.recastTime;

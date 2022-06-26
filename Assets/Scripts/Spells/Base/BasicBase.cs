@@ -7,7 +7,6 @@ public class BasicBase : MonoBehaviour
 {
     public SpellProjectileStats basicProjectileStats;
     public GameObject player;
-    public GameObject basicKeeper;
     public KeyCode keycode = KeyCode.Mouse0;
     public GameObject FirePoint;
 
@@ -24,6 +23,7 @@ public class BasicBase : MonoBehaviour
             case "Projectile":
                 gameObject.AddComponent<SpellProjectileBase>();
                 ProjectileBaseStart(basicProjectileStats);
+                Debug.Log("hah");
                 break;
             default:
                 Debug.Log("Didn't find the base");

@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b0b15c53c5f9e94e86860bb79ca224f, type: 3}
   m_Name: Conduits
   m_EditorClassIdentifier: 
-  spellName: 
-  instantiationType: 
+  spellName: Conduits
+  instantiationType: Centered
   lifespan: 5
   manaCost: 50
   cooldown: 20
