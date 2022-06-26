@@ -224,7 +224,7 @@ MonoBehaviour:
   targetMask:
     serializedVersion: 2
     m_Bits: 0
-  survivalTimeInCase: 3.5
+  survivalTimeInCase: 1
 --- !u!1 &8315840601058478995
 GameObject:
   m_ObjectHideFlags: 0

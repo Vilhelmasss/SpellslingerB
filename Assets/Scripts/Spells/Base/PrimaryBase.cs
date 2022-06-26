@@ -22,7 +22,6 @@ public class PrimaryBase : MonoBehaviour
             case "Cursor":
                 gameObject.AddComponent<SpellCursorBase>();
                 CursorBaseStart(primaryCursorStats);
-                Debug.Log("hah");
 
                 break;
             default:

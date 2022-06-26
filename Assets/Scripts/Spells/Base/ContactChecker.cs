@@ -7,7 +7,7 @@ public class ContactChecker : MonoBehaviour
     void Start()
     {
         Debug.Log("what");
-        Destroy(this, survivalTimeInCase);
+        Destroy(gameObject, survivalTimeInCase);
     }
     void OnCollisionEnter(Collision collision)
     {
