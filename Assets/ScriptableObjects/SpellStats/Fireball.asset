@@ -19,4 +19,4 @@ MonoBehaviour:
   cooldown: 1
   recastTime: 0.5
   stackMaxCount: 3
-  spellVfx: {fileID: 2032020823835487948, guid: 4f360cb173655b44eb46d3d64f1df03f, type: 3}
+  spellVfx: {fileID: 1661773228792354864, guid: 2683c1b4bf31d0b4cb32237d8117c241, type: 3}
