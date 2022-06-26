@@ -6,7 +6,6 @@ using UnityEngine;
 public class MoveProjectile : MonoBehaviour
 {
     public float speed;
-    public LayerMask targetMask = 10;
     void Update()
     {
         if (speed != 0)
@@ -20,18 +19,7 @@ public class MoveProjectile : MonoBehaviour
 
     }
 
-    void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.layer == targetMask)
-        {
-            Destroy(gameObject);
-        }
-        else if (collision.gameObject.layer == 11)
-        {
-            Destroy(gameObject);
-        }
 
-    }
      
 
 
