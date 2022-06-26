@@ -25,7 +25,7 @@ public class EnemyNavMeshAI : MonoBehaviour
             GameObject enemySpell = Instantiate(vfx, spawnPos, Quaternion.LookRotation(direction));
             Destroy(enemySpell, destroyTimeCast);
             enemySpell.layer = 8;
-            enemySpell.GetComponent<MoveProjectile>().targetMask = 6;
+            enemySpell.GetComponent<ContactChecker>().targetMask = 6;
         }
         Invoke("InstantiateAttack", 0.5f);
     }

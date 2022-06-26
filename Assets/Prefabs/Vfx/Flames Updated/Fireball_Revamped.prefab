@@ -4948,6 +4948,7 @@ GameObject:
   - component: {fileID: -8653577219082512230}
   - component: {fileID: 6107002437604782365}
   - component: {fileID: 2093690993601063009}
+  - component: {fileID: 4539761882753068844}
   m_Layer: 7
   m_Name: Fireball_Revamped
   m_TagString: Untagged
@@ -4997,9 +4998,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 20
-  targetMask:
-    serializedVersion: 2
-    m_Bits: 10
 --- !u!54 &2093690993601063009
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5016,3 +5014,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 4
   m_CollisionDetection: 0
+--- !u!114 &4539761882753068844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2032020823835487948}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de188000bd26d24db87d2735218f790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  survivalTimeInCase: 3.5

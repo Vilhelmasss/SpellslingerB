@@ -16657,7 +16657,7 @@ MonoBehaviour:
   layerMask:
     serializedVersion: 2
     m_Bits: 1280
-  vfx: {fileID: 2032020823835487948, guid: 4f360cb173655b44eb46d3d64f1df03f, type: 3}
+  vfx: {fileID: 2032020823835487948, guid: 50fe9eef2388d444ca4328956d58d5b0, type: 3}
   movePosTransform: {fileID: 215413583}
   FirePoint: {fileID: 1330292248}
   rangeTester: 

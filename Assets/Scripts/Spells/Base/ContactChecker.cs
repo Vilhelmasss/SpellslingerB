@@ -1,10 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class ContactChecker : MonoBehaviour
 {
-    public LayerMask targetLayers;
+    public LayerMask targetMask;
     public float survivalTimeInCase = 3.5f;
     void Start()
     {
@@ -12,7 +10,8 @@ public class ContactChecker : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.layer == targetLayers)
+        if(targetMask != null)
+        if (collision.gameObject.layer == targetMask)
         {
             Destroy(gameObject);
         }
