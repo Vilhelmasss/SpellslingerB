@@ -35,7 +35,7 @@ public class EnemySummoner : EnemyNavMeshAI
 
     void SpawnMinion()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < 10; i++)
         {
             int randomEnemy = Random.Range(0, 2);
             Debug.Log(randomEnemy);
