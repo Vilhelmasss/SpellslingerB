@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class PrimaryBase : MonoBehaviour
 {
-    public SpellCursorStats cursorStats;
     public SpellCursorStats primaryCursorStats;
     public GameObject player;
     public GameObject primaryKeeper;
