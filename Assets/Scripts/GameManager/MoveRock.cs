@@ -9,6 +9,10 @@ public class MoveRock : MonoBehaviour
     public Transform endMarker;
 
     public GameObject rockToMove;
+
+    public bool moveRock;
+
+    public bool moveNow;
     // Movement speed in units per second.
     public float speed = 1.0F;
 
@@ -20,18 +24,30 @@ public class MoveRock : MonoBehaviour
 
     void Start()
     {
-        // Keep a note of the time the movement started.
-        startTime = Time.time;
 
-        // Calculate the journey length.
-        journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+
+
     }
 
     // Move to the target end position.
     void Update()
     {
-        float distCovered = (Time.time - startTime) * speed;
-        float fractionOfJourney = distCovered / journeyLength;
-        rockToMove.transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fractionOfJourney);
+        if (moveRock)
+        {
+
+            startTime = Time.time;
+
+            // Calculate the journey length.
+            journeyLength = Vector3.Distance(startMarker.position, endMarker.position);
+            moveNow = true;
+            moveRock = false;
+        }
+
+        if (moveNow)
+        {
+            float distCovered = (Time.time - startTime) * speed;
+            float fractionOfJourney = distCovered / journeyLength;
+            rockToMove.transform.position = Vector3.Lerp(startMarker.position, endMarker.position, fractionOfJourney);
+        }
     }
 }
