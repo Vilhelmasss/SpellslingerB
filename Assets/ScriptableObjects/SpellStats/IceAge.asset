@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8f5db11f27bdac4fb153c9ae8cb3649, type: 3}
   m_Name: IceAge
   m_EditorClassIdentifier: 
-  spellName: 
+  spellName: Ice Age
   instantiationType: 
   lifespan: 5
   manaCost: 50
