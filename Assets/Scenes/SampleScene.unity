@@ -3358,7 +3358,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movementSpeed: 59
   canMove: 1
-  Conduit: {fileID: 837491374927518870, guid: 59aa7ea01f65a1c40a1605fa0c932af8, type: 3}
 --- !u!54 &215413581
 Rigidbody:
   m_ObjectHideFlags: 0
