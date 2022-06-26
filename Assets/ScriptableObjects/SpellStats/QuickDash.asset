@@ -12,12 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba31db963dd46ef4dba7a1c22fa9b559, type: 3}
   m_Name: QuickDash
   m_EditorClassIdentifier: 
+  spellName: 
+  instantiationType: 
+  lifespan: 0
+  manaCost: 10
+  cooldown: 1.5
+  recastTime: 0.4
+  stackMaxCount: 2
+  spellVfx: {fileID: 0}
   dashName: QuickDash
   dashTime: 0.2
   dashDistance: 4
-  manaCost: 10
-  cooldown: 2
-  recastTime: 0.2
-  stackMaxCount: 1
-  extraScript: 0
-  scriptName: 
