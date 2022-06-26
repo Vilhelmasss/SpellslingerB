@@ -5129,4 +5129,4 @@ MonoBehaviour:
   targetMask:
     serializedVersion: 2
     m_Bits: 0
-  survivalTimeInCase: 1.5
+  survivalTimeInCase: 2
