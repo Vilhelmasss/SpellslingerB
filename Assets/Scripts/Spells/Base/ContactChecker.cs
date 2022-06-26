@@ -3,9 +3,10 @@ using UnityEngine;
 public class ContactChecker : MonoBehaviour
 {
     public LayerMask targetMask;
-    public float survivalTimeInCase = 3.5f;
+    public float survivalTimeInCase = 1f;
     void Start()
     {
+        Debug.Log("what");
         Destroy(this, survivalTimeInCase);
     }
     void OnCollisionEnter(Collision collision)

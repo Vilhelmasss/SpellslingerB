@@ -9,8 +9,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private bool canMove = true;
     private IEnumerable coroutineDash;
 
-    public GameObject Conduit;
-
     void Update()
     {
         HandleMovementInput();
