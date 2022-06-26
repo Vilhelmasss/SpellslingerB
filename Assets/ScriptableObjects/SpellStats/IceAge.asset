@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: IceAge
   m_EditorClassIdentifier: 
   spellName: Ice Age
-  instantiationType: 
+  instantiationType: Cursor
   lifespan: 5
   manaCost: 50
   cooldown: 10

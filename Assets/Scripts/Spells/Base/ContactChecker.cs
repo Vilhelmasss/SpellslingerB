@@ -10,14 +10,16 @@ public class ContactChecker : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision)
     {
-        if(targetMask != null)
-        if (collision.gameObject.layer == targetMask)
+        if (targetMask != 0)
         {
-            Destroy(gameObject);
-        }
-        else if (collision.gameObject.layer == 11)
-        {
-            Destroy(gameObject);
+            if (collision.gameObject.layer == targetMask)
+            {
+                Destroy(gameObject);
+            }
+            else if (collision.gameObject.layer == 11)
+            {
+                Destroy(gameObject);
+            }
         }
 
     }

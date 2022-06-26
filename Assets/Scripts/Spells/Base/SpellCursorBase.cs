@@ -19,17 +19,13 @@ public class SpellCursorBase : SpellBase
 
     public override void AdjustForRunes(GameObject go)
     {
-        //        CommandCenter.Instance.GetComponent<CommandCenter>().AllRunesDictionary();
         CommandCenter.Instance.GetComponent<CommandCenter>().ExecuteAwake("MoreStacks", gameObject);
         CommandCenter.Instance.GetComponent<CommandCenter>().ExecuteAwake("ReduceManaCost", gameObject);
         CommandCenter.Instance.GetComponent<CommandCenter>().ExecuteAwake("DecreaseCooldown", gameObject);
-
-
     }
 
     public override void Update()
     {
-
         RecastTimer();
         RechargeCooldown();
     }
@@ -66,22 +62,6 @@ public class SpellCursorBase : SpellBase
 
     }
 
-    public float GetCooldown()
-    {
-        return currCooldownTimer;
-    }
-
-    public int GetStacks()
-    {
-        return stackCount;
-
-    }
-
-    public string GetProjectileName()
-    {
-        return cursorStats.spellName;
-    }
-
     void RecastTimer()
     {
         recastTimer -= Time.deltaTime;
@@ -111,6 +91,7 @@ public class SpellCursorBase : SpellBase
     }
     public override void AssignToBase()
     {
+        basicName = cursorStats.spellName;
         cooldownBase = cursorStats.cooldown;
         manaCostBase = cursorStats.manaCost;
         recastTimerMaxBase = cursorStats.recastTime;

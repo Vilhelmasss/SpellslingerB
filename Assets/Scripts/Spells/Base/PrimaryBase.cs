@@ -7,8 +7,6 @@ public class PrimaryBase : MonoBehaviour
 {
     public SpellCursorStats primaryCursorStats;
     public GameObject player;
-    public GameObject primaryKeeper;
-
     public GameObject FirePoint;
 
 
@@ -16,14 +14,16 @@ public class PrimaryBase : MonoBehaviour
     public TextMeshProUGUI cd;
     public TextMeshProUGUI stacks;
 
-    public string spellBase = "Projectile";
+    public string spellBase = "Cursor";
     void Start()
     {
         switch (spellBase)
         {
             case "Cursor":
-                primaryKeeper.AddComponent<SpellCursorBase>();
+                gameObject.AddComponent<SpellCursorBase>();
                 CursorBaseStart(primaryCursorStats);
+                Debug.Log("hah");
+
                 break;
             default:
                 Debug.Log("Didn't find the base");
@@ -31,7 +31,6 @@ public class PrimaryBase : MonoBehaviour
         }
 
         gameObject.GetComponent<SpellBase>().keyCode = KeyCode.Q;
-
         gameObject.GetComponent<SpellBase>().AssignToZero();
         gameObject.GetComponent<SpellBase>().AssignToBase();
         gameObject.GetComponent<SpellBase>().AssignFromBase();
@@ -49,6 +48,7 @@ public class PrimaryBase : MonoBehaviour
     {
         cd.text = gameObject.GetComponent<SpellBase>().currCooldownTimer.ToString("0.0");
         stacks.text = gameObject.GetComponent<SpellBase>().stackCount.ToString();
+
     }
 
     private void InitializeTMP()

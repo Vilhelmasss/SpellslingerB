@@ -100,6 +100,7 @@ public class SpellCenteredBase : SpellBase
     }
     public override void AssignToBase()
     {
+        basicName = centeredStats.spellName;
         cooldownBase = centeredStats.cooldown;
         manaCostBase = centeredStats.manaCost;
         recastTimerMaxBase = centeredStats.recastTime;
