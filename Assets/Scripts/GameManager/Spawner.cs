@@ -8,16 +8,6 @@ public class Spawner : MonoBehaviour
     public List<GameObject> spawnedEnemy;
     public List<Transform> spawner;
     public GameObject spawnVfx;
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
 
     void Wave1()
     {

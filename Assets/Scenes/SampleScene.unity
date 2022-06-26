@@ -3304,6 +3304,7 @@ MonoBehaviour:
   hitPoints: 0
   mana: 0
   manaRegen: 0
+  movSpeedBase: 8
   canTakeDamage: 0
   hitpointsTMP: {fileID: 868254099}
   manapointsTMP: {fileID: 903414616}
@@ -3355,7 +3356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3cbc84939d03a6d40b45594e355b2ced, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementSpeed: 8
+  movementSpeed: 59
   canMove: 1
   Conduit: {fileID: 837491374927518870, guid: 59aa7ea01f65a1c40a1605fa0c932af8, type: 3}
 --- !u!54 &215413581

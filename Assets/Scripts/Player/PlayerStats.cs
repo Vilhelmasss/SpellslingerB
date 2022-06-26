@@ -19,7 +19,7 @@ public class PlayerStats : MonoBehaviour
     private float hitPointsBase = 100f;
     private float manaBase = 100f;
     private float manaRegenBase = 20f;
-    private float movSpeedBase = 4f;
+    [SerializeField] private float movSpeedBase = 4f;
     private float manaThresholdMaxBase = 300f;
 
     public bool canTakeDamage;
