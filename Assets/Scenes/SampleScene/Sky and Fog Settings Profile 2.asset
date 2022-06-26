@@ -528,15 +528,15 @@ MonoBehaviour:
   active: 0
   m_AdvancedMode: 0
   quality:
-    m_OverrideState: 0
-    m_Value: 1
+    m_OverrideState: 1
+    m_Value: 3
   intensity:
-    m_OverrideState: 0
-    m_Value: 0
+    m_OverrideState: 1
+    m_Value: 10
     min: 0
   maximumVelocity:
-    m_OverrideState: 0
-    m_Value: 200
+    m_OverrideState: 1
+    m_Value: 250
     min: 0
     max: 1500
   minimumVelocity:
@@ -571,8 +571,8 @@ MonoBehaviour:
     min: 0
     max: 20
   m_SampleCount:
-    m_OverrideState: 0
-    m_Value: 8
+    m_OverrideState: 1
+    m_Value: 50
     min: 2
 --- !u!114 &7120831076134256042
 MonoBehaviour:
