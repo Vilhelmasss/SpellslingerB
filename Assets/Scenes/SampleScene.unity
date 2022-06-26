@@ -4119,7 +4119,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a51e420677ec8de44a841714df487eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cursorStats: {fileID: 11400000, guid: 3491772a3d9d5ab46bc89a6ee278d220, type: 2}
   primaryCursorStats: {fileID: 11400000, guid: 3491772a3d9d5ab46bc89a6ee278d220, type: 2}
   player: {fileID: 215413573}
   primaryKeeper: {fileID: 276497252}
@@ -20077,6 +20076,22 @@ PrefabInstance:
     - target: {fileID: 4990088512139583400, guid: c27f6340ca5aaca45be2998e90636c51, type: 3}
       propertyPath: m_LightShadowCasterMode
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990088512139583400, guid: c27f6340ca5aaca45be2998e90636c51, type: 3}
+      propertyPath: m_BoundingSphereOverride.w
+      value: -0.000000016230743
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990088512139583400, guid: c27f6340ca5aaca45be2998e90636c51, type: 3}
+      propertyPath: m_BoundingSphereOverride.x
+      value: 7.38e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990088512139583400, guid: c27f6340ca5aaca45be2998e90636c51, type: 3}
+      propertyPath: m_BoundingSphereOverride.y
+      value: 1.61e-43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4990088512139583400, guid: c27f6340ca5aaca45be2998e90636c51, type: 3}
+      propertyPath: m_BoundingSphereOverride.z
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c27f6340ca5aaca45be2998e90636c51, type: 3}
