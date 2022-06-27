@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17675817, g: 0.17675817, b: 0.17675817, a: 1}
+  m_IndirectSpecularColor: {r: 0.37628454, g: 0.35771358, b: 0.39473185, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -11323,6 +11323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseKey: 112
+  restartKey: 114
 --- !u!1 &805543441
 GameObject:
   m_ObjectHideFlags: 0
@@ -37698,6 +37699,7 @@ MonoBehaviour:
   moveRock: 0
   moveNow: 0
   speed: 1
+  moveRockKey: 102
 --- !u!33 &5875675070220568545
 MeshFilter:
   m_ObjectHideFlags: 0

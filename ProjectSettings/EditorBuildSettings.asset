@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/CameraScene.unity
-    guid: 74950a41c6886ef4c9e952d3481e1cdf
+    path: Assets/Scenes/CameraSceneEnemyPatrol.unity
+    guid: e5582037e72d6d34cb82a31a4f5167c6
   m_configObjects: {}
