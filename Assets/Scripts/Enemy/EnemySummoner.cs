@@ -38,7 +38,6 @@ public class EnemySummoner : EnemyNavMeshAI
         for (int i = 0; i < 10; i++)
         {
             int randomEnemy = Random.Range(0, 2);
-            Debug.Log(randomEnemy);
             Vector3 newEnemySpawnPoint = new Vector3(gameObject.transform.position.x + Random.Range(-5f, 5f),
                 gameObject.transform.position.y, gameObject.transform.position.z + Random.Range(-5f, 5f));
             GameObject spawnedEnemy = Instantiate(enemyList[randomEnemy], newEnemySpawnPoint, Quaternion.identity);

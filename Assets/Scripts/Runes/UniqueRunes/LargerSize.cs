@@ -14,7 +14,9 @@ public class LargerSize : MonoBehaviour, IRuneInterface
 
     public GameObject ExecuteAwake(GameObject go = null)
     {
-        go.transform.localScale *= 1.3f;
+        Debug.Log($"Here {go.name}");
+        Vector3 scaleChange = new Vector3(3f, 3f, 3f);
+        go.transform.localScale += scaleChange;
         return go;
     }
 

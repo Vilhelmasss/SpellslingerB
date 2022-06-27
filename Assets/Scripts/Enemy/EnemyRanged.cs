@@ -22,6 +22,7 @@ public class EnemyRanged : EnemyNavMeshAI
     {
         if (navMeshOn)
         {
+            if(movePosTransform != null)
             navMeshAgent.destination = movePosTransform.position;
         }
         else

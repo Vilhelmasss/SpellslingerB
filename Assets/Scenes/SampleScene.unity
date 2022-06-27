@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37628454, g: 0.35771358, b: 0.39473185, a: 1}
+  m_IndirectSpecularColor: {r: 0.17675817, g: 0.17675817, b: 0.17675817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5659,6 +5659,10 @@ MonoBehaviour:
   basicName: {fileID: 200292560}
   cd: {fileID: 1145042321}
   stacks: {fileID: 764801353}
+  Runes:
+  - LargerSize
+  - FasterProjectile
+  - IncreaseManaCost
   spellBase: Projectile
 --- !u!1 &458672879
 GameObject:
@@ -31003,6 +31007,7 @@ MonoBehaviour:
   moveRock: 0
   moveNow: 0
   speed: 1
+  moveRockKey: 0
 --- !u!33 &5875675070220568545
 MeshFilter:
   m_ObjectHideFlags: 0

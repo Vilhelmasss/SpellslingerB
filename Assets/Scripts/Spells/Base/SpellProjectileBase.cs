@@ -11,17 +11,25 @@ public class SpellProjectileBase : SpellBase
     [SerializeField] private List<InvRuneData> attachedRunes = new List<InvRuneData>(6);   
 
     public GameObject spellVfx;
-
+    public List<string> Runes = new List<string>();
     public override void GetSpellStats(ScriptableObject _spellStats)
     {
         projectileStats = (SpellProjectileStats)_spellStats;
     }
 
+
+    public override void SetRunes(List<string> runes)
+    {
+        if(runes != null)
+        Runes = runes;
+    }
     public override void AdjustForRunes(GameObject go)
     {
-        CommandCenter.Instance.GetComponent<CommandCenter>().ExecuteAwake("MoreStacks", gameObject);
-        CommandCenter.Instance.GetComponent<CommandCenter>().ExecuteAwake("ReduceManaCost", gameObject);
-        CommandCenter.Instance.GetComponent<CommandCenter>().ExecuteAwake("DecreaseCooldown", gameObject);
+        for (int i = 0; i < Runes.Count; i++)
+        {
+            CommandCenter.Instance.GetComponent<CommandCenter>().ExecuteAwake(Runes[i], gameObject);
+        }
+
     }
 
     public override void Update()
