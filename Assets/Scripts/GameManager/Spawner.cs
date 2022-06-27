@@ -14,6 +14,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         Wave1();
+        Invoke("Wave2", 30f);
     }
 
     void SpawnSimpleCreature()
@@ -31,6 +32,7 @@ public class Spawner : MonoBehaviour
 
     void Wave1()
     {
+        Debug.Log("Wave1");
         for (int i = 0; i < 3; i++)
         {
             float spawnStart = Random.Range(0f, 3f);
@@ -39,19 +41,20 @@ public class Spawner : MonoBehaviour
                 
                 Invoke("SpawnSimpleCreature", spawnStart++);
             }
-
         }
     }
 
     void Wave2()
     {
-        for (int i = 0; i < 3; i++)
+        Debug.Log("Wave2");
+        for (int i = 0; i < 3; i++) // just a three time champ ez
         {
-            float spawnStart = Random.Range(0f, 3f);
-            for (int j = 0; j < Random.Range(0, 10); j++)
+            float spawnStart = Random.Range(0f, 3f); // Delay from start to first spawn
+            for (int j = 0; j < Random.Range(0, 5); j++) // Monster Count
             {
 
-                Invoke("SpawnSimpleCreature", spawnStart++);
+                Invoke("SpawnSimpleCreature", spawnStart);
+                spawnStart += 3.5f;
             }
 
         }
