@@ -30,7 +30,6 @@ public class MoveCamera : MonoBehaviour
     public KeyCode distanceDecrease;
 
     void Update()
-
     {
         if (Input.GetKeyDown(horizontalIncrease))
         {
@@ -100,7 +99,6 @@ public class MoveCamera : MonoBehaviour
         if (Input.GetKey(KeyCode.A))
         {
             transform.Translate(Vector3.left * movSpeedHorizontal * Time.deltaTime);
-
         }
 
         if (Input.GetKey(KeyCode.D))
