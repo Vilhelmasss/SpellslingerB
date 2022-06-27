@@ -4912,6 +4912,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lookAtObject: {fileID: 845581904}
+  minSpeedHorizontal: 0
+  maxSpeedHorizontal: 30
+  incrementSpeedHorizontal: 2
+  movSpeedHorizontal: 10
+  horizontalIncrease: 113
+  horizontalDecrease: 101
+  minSpeedVertical: 0
+  maxSpeedVertical: 30
+  incrementSpeedVertical: 2
+  movSpeedVertical: 10
+  verticalIncrease: 0
+  verticalDecrease: 0
+  minSpeedDistance: 0
+  maxSpeedDistance: 30
+  incrementSpeedDistance: 2
+  movSpeedDistance: 10
+  distanceIncrease: 0
+  distanceDecrease: 0
 --- !u!1 &367342019
 GameObject:
   m_ObjectHideFlags: 0
