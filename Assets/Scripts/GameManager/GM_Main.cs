@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using Scene = UnityEngine.SceneManagement.Scene;
+
+//using UnityEngine.SceneManagement.Scene;
+//using UnityEngine.SearchService;
+
 
 public class GM_Main : MonoBehaviour
 {
@@ -26,10 +28,10 @@ public class GM_Main : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyDown(restartKey))
-        {
-            Scene scene = SceneManager.GetActiveScene();
-            SceneManager.LoadScene(scene.name);
-        }
+//        if (Input.GetKeyDown(restartKey))
+//        {
+//            Scene scene = SceneManager.GetActiveScene();
+//            SceneManager.LoadScene(scene.name);
+//        }
     }
 }
