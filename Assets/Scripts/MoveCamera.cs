@@ -4,64 +4,89 @@ using UnityEngine;
 
 public class MoveCamera : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public GameObject lookAtObject;
+
     void Start()
     {
 
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if (Input.GetKey(KeyCode.Space))
+        transform.LookAt(lookAtObject.transform);
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             transform.Translate(Vector3.forward * 10f * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.LeftShift))
+        if (Input.GetKey(KeyCode.Mouse1))
         {
             transform.Translate(Vector3.back* 10f * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.W))
-        {
-            Vector3 newEulerAngles = transform.eulerAngles;
-            newEulerAngles += Vector3.left * Time.deltaTime * 50f;
-            transform.eulerAngles = newEulerAngles;
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            Vector3 newEulerAngles = transform.eulerAngles;
-            newEulerAngles += Vector3.right * Time.deltaTime * 50f;
-            transform.eulerAngles = newEulerAngles;
-        }
-
         if (Input.GetKey(KeyCode.A))
         {
-            Vector3 newEulerAngles = transform.eulerAngles;
-            newEulerAngles += Vector3.down * Time.deltaTime * 100f;
-            transform.eulerAngles = newEulerAngles;
+            transform.Translate(Vector3.left * 10f * Time.deltaTime);
+
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            Vector3 newEulerAngles = transform.eulerAngles;
-            newEulerAngles += Vector3.up * Time.deltaTime * 100f;
-            transform.eulerAngles = newEulerAngles;
+            transform.Translate(Vector3.right * 10f * Time.deltaTime);
+
         }
 
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.W))
         {
-            Vector3 newEulerAngles = transform.eulerAngles;
-            newEulerAngles += Vector3.forward * Time.deltaTime * 100f;
-            transform.eulerAngles = newEulerAngles;
+            transform.Translate(Vector3.up * 10f * Time.deltaTime);
         }
 
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.S))
         {
-            Vector3 newEulerAngles = transform.eulerAngles;
-            newEulerAngles += Vector3.back * Time.deltaTime * 100f;
-            transform.eulerAngles = newEulerAngles;
+            transform.Translate(Vector3.down * 10f * Time.deltaTime);
         }
+
+//        if (Input.GetKey(KeyCode.W))
+//        {
+//            Vector3 newEulerAngles = transform.eulerAngles;
+//            newEulerAngles += Vector3.left * Time.deltaTime * 50f;
+//            transform.eulerAngles = newEulerAngles;
+//        }
+//
+//        if (Input.GetKey(KeyCode.S))
+//        {
+//            Vector3 newEulerAngles = transform.eulerAngles;
+//            newEulerAngles += Vector3.right * Time.deltaTime * 50f;
+//            transform.eulerAngles = newEulerAngles;
+//        }
+//
+//        if (Input.GetKey(KeyCode.A))
+//        {
+//            Vector3 newEulerAngles = transform.eulerAngles;
+//            newEulerAngles += Vector3.down * Time.deltaTime * 100f;
+//            transform.eulerAngles = newEulerAngles;
+//        }
+//
+//        if (Input.GetKey(KeyCode.D))
+//        {
+//            Vector3 newEulerAngles = transform.eulerAngles;
+//            newEulerAngles += Vector3.up * Time.deltaTime * 100f;
+//            transform.eulerAngles = newEulerAngles;
+//        }
+
+//        if (Input.GetKey(KeyCode.Mouse0))
+//        {
+//            Vector3 newEulerAngles = transform.eulerAngles;
+//            newEulerAngles += Vector3.forward * Time.deltaTime * 100f;
+//            transform.eulerAngles = newEulerAngles;
+//        }
+
+//        if (Input.GetKey(KeyCode.Mouse1))
+//        {
+//            Vector3 newEulerAngles = transform.eulerAngles;
+//            newEulerAngles += Vector3.back * Time.deltaTime * 100f;
+//            transform.eulerAngles = newEulerAngles;
+//        }
+
     }
 }
