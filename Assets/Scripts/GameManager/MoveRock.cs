@@ -22,15 +22,33 @@ public class MoveRock : MonoBehaviour
     // Total distance between the markers.
     private float journeyLength;
 
+
+    [SerializeField] private KeyCode moveRockKey;
     void Start()
     {
-
+        moveRock = false;
 
 
     }
 
-    // Move to the target end position.
     void Update()
+    {
+        if (Input.GetKeyDown(moveRockKey))
+        {
+            moveRock = !moveRock;
+//            Invoke("SwapMarkers", 4f);
+        }
+    }
+
+    private void SwapMarkers()
+    {
+        Transform tempTrans;
+//        tempTrans.position = startMarker.position;
+        startMarker = endMarker;
+        endMarker = startMarker;
+    }
+
+    void FixedUpdate()
     {
         if (moveRock)
         {
