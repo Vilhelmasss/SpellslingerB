@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17675817, g: 0.17675817, b: 0.17675817, a: 1}
+  m_IndirectSpecularColor: {r: 0.37628454, g: 0.35771358, b: 0.39473185, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4922,14 +4922,14 @@ MonoBehaviour:
   maxSpeedVertical: 30
   incrementSpeedVertical: 2
   movSpeedVertical: 10
-  verticalIncrease: 0
-  verticalDecrease: 0
+  verticalIncrease: 264
+  verticalDecrease: 258
   minSpeedDistance: 0
   maxSpeedDistance: 30
   incrementSpeedDistance: 2
   movSpeedDistance: 10
-  distanceIncrease: 0
-  distanceDecrease: 0
+  distanceIncrease: 32
+  distanceDecrease: 304
 --- !u!1 &367342019
 GameObject:
   m_ObjectHideFlags: 0
