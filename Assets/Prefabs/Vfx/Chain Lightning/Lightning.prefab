@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 147363372847916628}
   - component: {fileID: 1156388640602294771}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -139,10 +139,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7757198555689496119}
-  - component: {fileID: 4973895449334737300}
   - component: {fileID: 2971752406780851486}
   - component: {fileID: 1183500039038981220}
-  m_Layer: 0
+  - component: {fileID: 2483619488774136886}
+  - component: {fileID: 4843923874348114170}
+  m_Layer: 7
   m_Name: Lightning
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,19 +168,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &4973895449334737300
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5309216723710911796}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &2971752406780851486
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,6 +193,35 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cbd22451e0ae2e5499a5bacddb099df4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2483619488774136886
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5309216723710911796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de188000bd26d24db87d2735218f790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  survivalTimeInCase: 5
+--- !u!135 &4843923874348114170
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5309216723710911796}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6873031522206025279
 GameObject:
   m_ObjectHideFlags: 0
@@ -215,7 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6436608025205951533}
   - component: {fileID: 2606331392605188307}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trail (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -345,7 +362,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1592947066865872326}
   - component: {fileID: 1506242171384360534}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trail (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -475,7 +492,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6596901477487263163}
   - component: {fileID: 3042740644938529341}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Trail (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

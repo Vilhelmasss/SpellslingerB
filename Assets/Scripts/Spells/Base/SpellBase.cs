@@ -39,6 +39,7 @@ public abstract class SpellBase : MonoBehaviour
     public abstract void AdjustForRunes(GameObject go);
     public abstract void CastSpell(GameObject player, GameObject firePoint);
 
+    public virtual void SetRunes(List<string> runes){}
     public abstract void Update();
 
 

@@ -15,6 +15,7 @@ public class BasicBase : MonoBehaviour
     public TextMeshProUGUI cd;
     public TextMeshProUGUI stacks;
 
+    public List<string> Runes;
     public string spellBase = "Projectile";
     void Start()
     {
@@ -23,7 +24,6 @@ public class BasicBase : MonoBehaviour
             case "Projectile":
                 gameObject.AddComponent<SpellProjectileBase>();
                 ProjectileBaseStart(basicProjectileStats);
-                Debug.Log("hah");
                 break;
             default:
                 Debug.Log("Didn't find the base");
@@ -34,6 +34,7 @@ public class BasicBase : MonoBehaviour
         gameObject.GetComponent<SpellBase>().AssignToZero();
         gameObject.GetComponent<SpellBase>().AssignToBase();
         gameObject.GetComponent<SpellBase>().AssignFromBase();
+        gameObject.GetComponent<SpellBase>().SetRunes(Runes);
         gameObject.GetComponent<SpellBase>().AdjustForRunes(gameObject);
         InitializeTMP();
     }

@@ -25,8 +25,7 @@ public class AreaOverTime : MonoBehaviour
             dealDamage = false;
             if (other.gameObject.layer == 10)
             {
-                Debug.Log("Enemy Found");
-                // deal damage
+
             }
         }
     }

@@ -12,7 +12,9 @@ GameObject:
   - component: {fileID: 8526267918156256627}
   - component: {fileID: 5174501489343884929}
   - component: {fileID: 4926058358785811850}
-  m_Layer: 0
+  - component: {fileID: 7111210024456888963}
+  - component: {fileID: 5527084785668921212}
+  m_Layer: 7
   m_Name: Conduit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4822,3 +4824,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextConduit: {fileID: 0}
   conduitLightning: {fileID: 5309216723710911796, guid: d41310f811279e748bc9ceb9c7f6aab2, type: 3}
+--- !u!135 &7111210024456888963
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740244527289769622}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &5527084785668921212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2740244527289769622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8de188000bd26d24db87d2735218f790, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetMask:
+    serializedVersion: 2
+    m_Bits: 0
+  survivalTimeInCase: 10

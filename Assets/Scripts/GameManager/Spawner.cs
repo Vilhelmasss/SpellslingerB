@@ -14,7 +14,6 @@ public class Spawner : MonoBehaviour
     void Start()
     {
         Wave1();
-        Invoke("Wave2", 30f);
     }
 
     void SpawnSimpleCreature()
@@ -32,7 +31,6 @@ public class Spawner : MonoBehaviour
 
     void Wave1()
     {
-        Debug.Log("Wave1");
         for (int i = 0; i < 3; i++)
         {
             float spawnStart = Random.Range(0f, 3f);
@@ -42,6 +40,7 @@ public class Spawner : MonoBehaviour
                 Invoke("SpawnSimpleCreature", spawnStart++);
             }
         }
+        Invoke("Wave2", 10f);
     }
 
     void Wave2()
@@ -50,7 +49,7 @@ public class Spawner : MonoBehaviour
         for (int i = 0; i < 3; i++) // just a three time champ ez
         {
             float spawnStart = Random.Range(0f, 3f); // Delay from start to first spawn
-            for (int j = 0; j < Random.Range(0, 5); j++) // Monster Count
+            for (int j = 0; j < Random.Range(0, 10); j++) // Monster Count
             {
 
                 Invoke("SpawnSimpleCreature", spawnStart);
@@ -58,6 +57,8 @@ public class Spawner : MonoBehaviour
             }
 
         }
+
+        Invoke("Wave3", 30f);
     }
 
     void Wave3()
@@ -72,6 +73,9 @@ public class Spawner : MonoBehaviour
             }
 
         }
+
+        Invoke("Wave4", 30f);
+
     }
 
     void Wave4()
@@ -86,8 +90,27 @@ public class Spawner : MonoBehaviour
             }
 
         }
+
+        Invoke("Wave5", 30f);
+
     }
 
+
+    void Wave5()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            float spawnStart = Random.Range(0f, 3f);
+            for (int j = 0; j < Random.Range(0, 10); j++)
+            {
+
+                Invoke("SpawnSimpleCreature", spawnStart++);
+            }
+
+        }
+
+
+    }
 
 
 }

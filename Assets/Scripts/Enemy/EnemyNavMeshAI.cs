@@ -76,21 +76,18 @@ public class EnemyNavMeshAI : MonoBehaviour
         {
             if (hit.collider.gameObject.layer == 6)
             {
-                Debug.Log("Target Acquired");
                 navMeshOn = false;
                 navMeshAgent.enabled = false;
 
             }
             else
             {
-                Debug.Log("Target Lost");
                 navMeshOn = true;
                 navMeshAgent.enabled = true;
             }
         }
         else
             {
-                Debug.Log("Target Lost");
                 navMeshOn = true;
                 navMeshAgent.enabled = true;
             }
