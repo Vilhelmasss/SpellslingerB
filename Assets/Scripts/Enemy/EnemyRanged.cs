@@ -9,6 +9,8 @@ public class EnemyRanged : EnemyNavMeshAI
     private void Awake()
     {
         navMeshAgent = gameObject.GetComponent<NavMeshAgent>();
+        movePosTransform = GM_Main.Instance.Player.transform;
+
     }
     void Start()
     {

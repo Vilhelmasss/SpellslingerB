@@ -78,7 +78,6 @@ public class CardFull : MonoBehaviour
     {
         for (int i = 0; i < 6; i++)
         {
-            Debug.Log("background");
             runeSlots[i].gameObject.GetComponent<Image>().sprite = background;
             runeSlots[i].gameObject.GetComponent<Image>().color = Color.white;  
         }

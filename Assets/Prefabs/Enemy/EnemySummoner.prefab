@@ -220,8 +220,8 @@ MonoBehaviour:
   navMeshOn: 1
   destroyTimeCast: 15
   enemyList:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 532735377043155736, guid: 6b8b94970017b2e4ba96cb187a3da6e9, type: 3}
+  - {fileID: 5869103607340572703, guid: 1e08810908fa3654fae17beb674327e9, type: 3}
 --- !u!1 &4849848297347446832
 GameObject:
   m_ObjectHideFlags: 0

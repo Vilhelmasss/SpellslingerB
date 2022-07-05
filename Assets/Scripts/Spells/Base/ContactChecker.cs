@@ -6,7 +6,6 @@ public class ContactChecker : MonoBehaviour
     public float survivalTimeInCase = 1f;
     void Start()
     {
-        Debug.Log("what");
         Destroy(gameObject, survivalTimeInCase);
     }
     void OnCollisionEnter(Collision collision)
@@ -15,7 +14,6 @@ public class ContactChecker : MonoBehaviour
         {
             if (collision.gameObject.layer == 10)
             {
-                Debug.Log($"Found Enemy by {gameObject.name}");
                 Destroy(collision.gameObject);
                 Destroy(gameObject);
             }

@@ -15,7 +15,10 @@ public class EnemyNavMeshAI : MonoBehaviour
     public bool navMeshOn = true;
     public float destroyTimeCast = 15f;
 
-
+    public void FindPlayer()
+    {
+        navMeshAgent.destination = GM_Main.Instance.Player.transform.position;
+    }
 
     public void InstantiateAttack()
     {

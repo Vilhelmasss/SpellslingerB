@@ -8,8 +8,8 @@ using UnityEngine.Rendering;
 
 public class SpellProjectileBase : SpellBase
 {
-    [SerializeField] private List<InvRuneData> attachedRunes = new List<InvRuneData>(6);   
-
+    [SerializeField] private List<InvRuneData> attachedRunes = new List<InvRuneData>(6);
+    private GameObject lmao;
     public GameObject spellVfx;
     public List<string> Runes = new List<string>();
     public override void GetSpellStats(ScriptableObject _spellStats)
@@ -25,9 +25,15 @@ public class SpellProjectileBase : SpellBase
     }
     public override void AdjustForRunes(GameObject go)
     {
+        lmao = go;
         for (int i = 0; i < Runes.Count; i++)
         {
             CommandCenter.Instance.GetComponent<CommandCenter>().ExecuteAwake(Runes[i], gameObject);
+        }
+
+        if (go.transform.localScale.x > 1 )
+        {
+            spellVfx.transform.localScale += new Vector3(3f, 3f, 3f);
         }
 
     }
@@ -57,6 +63,10 @@ public class SpellProjectileBase : SpellBase
         Vector3 direction = firePoint.transform.position - player.transform.position;
         GameObject vfx = Instantiate(spellVfx, firePoint.transform.position + Vector3.up * 0.5f,
             Quaternion.LookRotation(direction));
+        if (lmao.transform.localScale.x > 1)
+        {
+//            vfx.transform.localScale += new Vector3(3f, 3f, 3f);    
+        }
         stackCount--;    
         Destroy(vfx, projectileStats.lifespan);
 
@@ -96,6 +106,7 @@ public class SpellProjectileBase : SpellBase
         stackMaxCountBase = projectileStats.stackMaxCount;
         lifespanBase = projectileStats.lifespan;
         spellVfx = projectileStats.spellVfx;
+        
     }
 
     public override void AssignToZero()

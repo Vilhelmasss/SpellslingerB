@@ -11,9 +11,23 @@ public class GM_Main : MonoBehaviour
 {
     [SerializeField] private KeyCode pauseKey;
     [SerializeField] private KeyCode restartKey;
-
+    public GameObject Player;
     private SceneManager sceneManager;
-    // Update is called once per frame
+
+    public static GM_Main Instance { get; private set; }
+    private void Awake()
+    {
+
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     void Update()
     {
         if (Input.GetKeyDown(pauseKey))
