@@ -15,7 +15,8 @@ public class EnemyPatrol : MonoBehaviour
 
     void Start()
     {
-        FindNewSpot();
+//        if(MoveToNext[0] != null)
+//        FindNewSpot();
     }
 
     // Update is called once per frame

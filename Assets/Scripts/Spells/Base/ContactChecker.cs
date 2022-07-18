@@ -36,7 +36,6 @@ public class ContactChecker : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.name);
         if (other.gameObject.layer == 10)
         {
             Destroy(other.gameObject);

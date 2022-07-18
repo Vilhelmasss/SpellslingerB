@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 532735377043155742}
   - component: {fileID: 532735377043155737}
   - component: {fileID: 6374157787502476365}
+  - component: {fileID: 2314528566543437526}
   m_Layer: 10
   m_Name: EnemyMeleePatrol
   m_TagString: Untagged
@@ -230,7 +231,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 532735377043155736}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3572c51f234e9924db790681577adb83, type: 3}
   m_Name: 
@@ -247,6 +248,19 @@ MonoBehaviour:
   spawnPos: {x: 0, y: 0, z: 0}
   navMeshOn: 1
   destroyTimeCast: 15
+--- !u!114 &2314528566543437526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 532735377043155736}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b32243615cd77347bfd1e922ed96f08, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MoveToNext: []
 --- !u!1 &6374157785993173737
 GameObject:
   m_ObjectHideFlags: 0
